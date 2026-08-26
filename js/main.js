@@ -40,9 +40,11 @@
 
   document.querySelectorAll(".site-nav .has-sub > a").forEach(function (link) {
     link.addEventListener("click", function (e) {
+      e.preventDefault();
       if (mobileNavQuery.matches) {
-        e.preventDefault();
-        link.parentElement.classList.toggle("open");
+        var item = link.parentElement;
+        var open = item.classList.toggle("open");
+        link.setAttribute("aria-expanded", open ? "true" : "false");
       }
     });
   });

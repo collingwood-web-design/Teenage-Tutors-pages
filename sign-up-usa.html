@@ -26,14 +26,14 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li class="has-sub">
-            <a href="find-a-tutor.html">Find a Tutor</a>
+            <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Find a Tutor</a>
             <ul class="sub">
               <li><a href="canada.html" class="nav-country-canada"><img class="nav-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-canada.svg" alt="" width="22" height="15">Canada</a></li>
               <li><a href="usa.html" class="nav-country-usa"><img class="nav-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-usa.svg" alt="" width="22" height="15">USA</a></li>
             </ul>
           </li>
           <li class="has-sub">
-            <a class="nav-cta-signup is-active" href="sign-up-usa.html">Sign Up</a>
+            <a class="nav-cta-signup is-active" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sign Up</a>
             <ul class="sub">
               <li><a href="sign-up.html" class="nav-country-canada"><img class="nav-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-canada.svg" alt="" width="22" height="15">Canada</a></li>
               <li><a href="sign-up-usa.html" class="nav-country-usa is-active"><img class="nav-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-usa.svg" alt="" width="22" height="15">USA</a></li>
@@ -110,12 +110,65 @@
                 <input id="su-city" name="city" type="text" autocomplete="address-level2">
               </div>
               <div>
-                <label for="su-province">Province/State</label>
-                <input id="su-province" name="province" type="text" autocomplete="address-level1">
+                <label for="su-state">State</label>
+                <select id="su-state" name="state" autocomplete="address-level1">
+                  <option value="">Select state</option>
+                  <option>Alabama</option>
+                  <option>Alaska</option>
+                  <option>Arizona</option>
+                  <option>Arkansas</option>
+                  <option>California</option>
+                  <option>Colorado</option>
+                  <option>Connecticut</option>
+                  <option>Delaware</option>
+                  <option>District of Columbia</option>
+                  <option>Florida</option>
+                  <option>Georgia</option>
+                  <option>Hawaii</option>
+                  <option>Idaho</option>
+                  <option>Illinois</option>
+                  <option>Indiana</option>
+                  <option>Iowa</option>
+                  <option>Kansas</option>
+                  <option>Kentucky</option>
+                  <option>Louisiana</option>
+                  <option>Maine</option>
+                  <option>Maryland</option>
+                  <option>Massachusetts</option>
+                  <option>Michigan</option>
+                  <option>Minnesota</option>
+                  <option>Mississippi</option>
+                  <option>Missouri</option>
+                  <option>Montana</option>
+                  <option>Nebraska</option>
+                  <option>Nevada</option>
+                  <option>New Hampshire</option>
+                  <option>New Jersey</option>
+                  <option>New Mexico</option>
+                  <option>New York</option>
+                  <option>North Carolina</option>
+                  <option>North Dakota</option>
+                  <option>Ohio</option>
+                  <option>Oklahoma</option>
+                  <option>Oregon</option>
+                  <option>Pennsylvania</option>
+                  <option>Rhode Island</option>
+                  <option>South Carolina</option>
+                  <option>South Dakota</option>
+                  <option>Tennessee</option>
+                  <option>Texas</option>
+                  <option>Utah</option>
+                  <option>Vermont</option>
+                  <option>Virginia</option>
+                  <option>Washington</option>
+                  <option>West Virginia</option>
+                  <option>Wisconsin</option>
+                  <option>Wyoming</option>
+                </select>
               </div>
               <div>
-                <label for="su-postal">Postal Code/Zip</label>
-                <input id="su-postal" name="postal" type="text" autocomplete="postal-code">
+                <label for="su-zip">Zip</label>
+                <input id="su-zip" name="zip" type="text" autocomplete="postal-code">
               </div>
             </div>
             <div>
