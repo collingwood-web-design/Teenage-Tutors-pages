@@ -1741,7 +1741,7 @@ textarea {
   color: var(--white);
   background:
     url("https://media.cwd-cdn.com/teenage-tutors/images/chalkboard-become.jpg") center bottom / cover no-repeat;
-  padding: 1.25rem 1.25rem 1.5rem;
+  padding: 1.25rem 1.25rem 2rem;
 }
 
 .canada-hero .wrap {
@@ -1765,7 +1765,7 @@ textarea {
 .canada-hero-map {
   width: min(100%, 520px);
   max-height: min(42vh, 340px);
-  margin: 0 auto;
+  margin: 0 auto clamp(1.25rem, 3vw, 2rem);
   display: block;
   object-fit: contain;
 }
@@ -1785,7 +1785,7 @@ textarea {
 
 @media (max-width: 760px) {
   .canada-hero {
-    padding: 1rem 1rem 1.15rem;
+    padding: 1rem 1rem 1.75rem;
   }
 
   .canada-hero .wrap {
@@ -1820,16 +1820,22 @@ textarea {
 
 .logo-marquee-track {
   display: flex;
+  align-items: center;
+  gap: clamp(3rem, 6vw, 5.5rem);
   width: max-content;
-  animation: logo-marquee-scroll 50s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  animation: logo-marquee-scroll 75s linear infinite;
+}
+
+.logo-marquee-track:not(.is-ready) {
+  animation: none;
 }
 
 .logo-marquee-group {
-  display: flex;
-  align-items: center;
-  gap: clamp(3rem, 6vw, 5.5rem);
+  display: contents;
   margin: 0;
-  padding: 0 clamp(1.5rem, 4vw, 3rem);
+  padding: 0;
   list-style: none;
 }
 
@@ -1847,11 +1853,11 @@ textarea {
 
 @keyframes logo-marquee-scroll {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translate3d(calc(-1 * var(--marquee-distance, 50%)), 0, 0);
   }
 }
 

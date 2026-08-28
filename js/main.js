@@ -306,4 +306,27 @@
   }
 
   loadRoughNotation(initSketchUnderlines);
+
+  function initLogoMarquee() {
+    var track = document.querySelector(".logo-marquee-track");
+    if (!track || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    function setDistance() {
+      var items = track.querySelectorAll("li");
+      if (items.length < 2) return;
+      var half = items.length / 2;
+      var distance = items[half].getBoundingClientRect().left - items[0].getBoundingClientRect().left;
+      if (distance <= 0) return;
+      track.style.setProperty("--marquee-distance", distance + "px");
+      track.classList.add("is-ready");
+    }
+
+    setDistance();
+    window.addEventListener("resize", setDistance);
+    track.querySelectorAll("img").forEach(function (img) {
+      if (!img.complete) img.addEventListener("load", setDistance, { once: true });
+    });
+  }
+
+  initLogoMarquee();
 })();
