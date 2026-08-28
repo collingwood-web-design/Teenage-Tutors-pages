@@ -1985,6 +1985,12 @@ textarea {
   margin-bottom: 1.5rem;
 }
 
+.section-title + .region-intro {
+  margin-top: -0.85rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
 .region-intro {
   max-width: 40rem;
   margin: 0 auto 1.75rem;
