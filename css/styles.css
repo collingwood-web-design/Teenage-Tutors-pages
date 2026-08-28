@@ -1882,7 +1882,7 @@ textarea {
   color: var(--white);
   background:
     url("https://media.cwd-cdn.com/teenage-tutors/images/chalkboard-hero.jpg") center bottom / cover no-repeat;
-  padding: 4rem 1.25rem 5rem;
+  padding: 4rem 1.25rem clamp(5.5rem, 10vw, 7rem);
 }
 
 .community-hero-kicker {
@@ -1895,7 +1895,7 @@ textarea {
 }
 
 .community-hero h1 {
-  margin: 0 auto;
+  margin: 0 auto clamp(1.25rem, 3vw, 2rem);
   max-width: 38rem;
   font-family: var(--font-display);
   font-size: clamp(1.35rem, 3.2vw, 1.85rem);
