@@ -52,87 +52,70 @@
       <div class="wrap">
         <h1>Based in Toronto &amp; Collingwood for In-Person tutoring and available Online throughout Canada</h1>
         <img class="canada-hero-map" src="https://media.cwd-cdn.com/teenage-tutors/images/map-canada.png" alt="Based in Toronto &amp; Collingwood for In-Person tutoring">
-        <div class="btn-row canada-hero-actions">
-          <a class="btn btn-blue btn-pill btn-shadow" href="#tutors" data-tutor-mode="in-person">In-Person</a>
-          <a class="btn btn-blue btn-pill btn-shadow" href="#tutors" data-tutor-mode="online">Online</a>
-        </div>
       </div>
     </section>
 
     <section class="section section-alt" id="regions">
       <div class="wrap">
-        <h2 class="section-title sketch-underline">In-Person Tutors – Toronto &amp; Collingwood</h2>
-        <p class="center region-intro">We carefully match students and tutors based on both location and availability to ensure the best possible fit and scheduling convenience.</p>
+        <h2 class="section-title sketch-underline">In-Person &amp; Online Tutors – Toronto &amp; Collingwood</h2>
+        <p class="center region-intro">Our Territory Managers carefully match students and tutors based on both location and availability to ensure the best possible fit and scheduling convenience.</p>
+        <p class="center region-intro">We have over 100 tutors across North America</p>
         <div class="region-grid">
-          <a class="region-tile" id="east" href="#tutors" data-tutor-mode="in-person" data-tutor-location="East Toronto">
+          <div class="region-tile" id="east">
             <span class="region-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></span>
             <span class="region-name">East Toronto</span>
             <span class="region-desc">Beaches-area neighbourhoods</span>
-          </a>
-          <a class="region-tile" id="midtown" href="#tutors" data-tutor-mode="in-person" data-tutor-location="Toronto Midtown">
+            <div class="region-contact">
+              <p><strong>Territory Manager:</strong> Maureen</p>
+              <p><a href="mailto:maureen.teenagetutors@gmail.com">maureen.teenagetutors@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="region-tile" id="midtown">
             <span class="region-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></span>
-            <span class="region-name">Midtown</span>
+            <span class="region-name">Midtown Toronto</span>
             <span class="region-desc">Toronto Midtown</span>
-          </a>
-          <a class="region-tile" id="uptown" href="#tutors" data-tutor-mode="in-person" data-tutor-location="Toronto Uptown">
+            <div class="region-contact">
+              <p><strong>Territory Manager:</strong> Emily</p>
+              <p><a href="mailto:emily.teenagetutors@gmail.com">emily.teenagetutors@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="region-tile" id="uptown">
             <span class="region-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></span>
-            <span class="region-name">Uptown</span>
+            <span class="region-name">Uptown Toronto</span>
             <span class="region-desc">Toronto Uptown</span>
-          </a>
-          <a class="region-tile" id="west" href="#tutors" data-tutor-mode="in-person" data-tutor-location="Toronto West">
+            <div class="region-contact">
+              <p><strong>Territory Manager:</strong> Noelle</p>
+              <p><a href="mailto:noelle@theteenagetutors.com">noelle@theteenagetutors.com</a></p>
+            </div>
+          </div>
+          <div class="region-tile" id="west">
             <span class="region-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></span>
-            <span class="region-name">West</span>
+            <span class="region-name">West Toronto</span>
             <span class="region-desc">Toronto West</span>
-          </a>
-          <a class="region-tile" id="collingwood" href="#tutors" data-tutor-mode="in-person" data-tutor-location="Collingwood">
+            <div class="region-contact">
+              <p><strong>Territory Manager:</strong> Yordest</p>
+              <p><a href="mailto:yordest.teenagetutors@gmail.com">yordest.teenagetutors@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="region-tile" id="collingwood">
             <span class="region-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></span>
             <span class="region-name">Collingwood</span>
             <span class="region-desc">Collingwood &amp; area</span>
-          </a>
-          <a class="region-tile region-tile-online" id="online" href="#tutors" data-tutor-mode="online" data-tutor-location="Online">
+            <div class="region-contact">
+              <p><strong>Territory Manager:</strong> Noelle</p>
+              <p><a href="mailto:noelle@theteenagetutors.com">noelle@theteenagetutors.com</a></p>
+            </div>
+          </div>
+          <div class="region-tile region-tile-online" id="online">
             <span class="region-icon" aria-hidden="true"><i class="fas fa-laptop"></i></span>
             <span class="region-name">Online</span>
             <span class="region-desc">Throughout Canada</span>
-          </a>
+            <div class="region-contact">
+              <p><strong>Territory Manager:</strong> Noelle</p>
+              <p><a href="mailto:noelle@theteenagetutors.com">noelle@theteenagetutors.com</a></p>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section" id="tutors">
-      <div class="wrap">
-        <h2 class="section-title sketch-underline">Tutor Profiles</h2>
-        <p class="center mb-1 tutor-help">Use the filters below, then click a tutor’s name to expand and read their full profile.</p>
-        <div class="tutor-mode-toggle" role="group" aria-label="Tutoring mode">
-          <button type="button" class="tutor-mode-btn is-active" data-mode="">All</button>
-          <button type="button" class="tutor-mode-btn" data-mode="in-person">In-Person</button>
-          <button type="button" class="tutor-mode-btn" data-mode="online">Online</button>
-        </div>
-        <div class="tutor-filters">
-          <label for="tutor-location">Location
-            <select id="tutor-location">
-              <option value="">All locations</option>
-              <option value="East Toronto">East Toronto</option>
-              <option value="Toronto Midtown">Toronto Midtown</option>
-              <option value="Toronto Uptown">Toronto Uptown</option>
-              <option value="Toronto West">Toronto West</option>
-              <option value="Collingwood">Collingwood</option>
-              <option value="Online">Online</option>
-            </select>
-          </label>
-          <label for="tutor-subject">Subject
-            <select id="tutor-subject">
-              <option value="">All subjects</option>
-              <option value="Math">Math</option>
-              <option value="English">English</option>
-              <option value="French">French</option>
-              <option value="Spanish">Spanish</option>
-              <option value="Science">Science</option>
-              <option value="Music">Music</option>
-              <option value="Computer">Computer Science</option>
-            </select>
-          </label>
-        </div>
-        <div id="canada-tutors"></div>
       </div>
     </section>
   </main>
@@ -195,7 +178,6 @@
       </div>
     </div>
   </footer>
-  <script src="js/tutors-data.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -50,55 +50,34 @@
   <main>
     <section class="canada-hero usa-hero">
       <div class="wrap">
-        <h1>Based in Portland, Maine for In-person tutoring<br>and available Online throughout the USA</h1>
-        <img class="canada-hero-map" src="https://media.cwd-cdn.com/teenage-tutors/images/map-usa.png" alt="Teenage Tutors USA — Portland, Maine and online nationwide">
-        <div class="btn-row canada-hero-actions">
-          <a class="btn btn-blue btn-pill btn-shadow" href="sign-up-usa.html">Sign Up</a>
-          <a class="btn btn-blue btn-pill btn-shadow" href="#tutors" data-tutor-mode="in-person">In-Person</a>
-          <a class="btn btn-blue btn-pill btn-shadow" href="#tutors" data-tutor-mode="online">Online</a>
-        </div>
+        <h1>Online throughout the USA</h1>
+        <img class="canada-hero-map" src="https://media.cwd-cdn.com/teenage-tutors/images/map-usa.png" alt="Teenage Tutors USA — online nationwide">
       </div>
     </section>
 
-    <section class="section" id="inperson">
-      <div class="wrap center">
-        <h2 class="section-title sketch-underline">In-Person Tutors – Portland, Maine</h2>
-        <p class="region-intro"><strong>(January 2027)</strong></p>
-        <p class="region-intro">Online tutors are available throughout the USA, tailored to fit your schedule and needs.</p>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="tutors">
+    <section class="section section-alt" id="inperson">
       <div class="wrap">
-        <h2 class="section-title sketch-underline">Tutor Profiles</h2>
-        <p class="center mb-1 tutor-help">Use the filters below, then click a tutor’s name to expand and read their full profile.</p>
-        <div class="tutor-mode-toggle" role="group" aria-label="Tutoring mode">
-          <button type="button" class="tutor-mode-btn is-active" data-mode="">All</button>
-          <button type="button" class="tutor-mode-btn" data-mode="in-person">In-Person</button>
-          <button type="button" class="tutor-mode-btn" data-mode="online">Online</button>
+        <p class="center region-intro"><strong>(January 2027)</strong></p>
+        <p class="center region-intro">Online tutors are available throughout the USA, tailored to fit your schedule and needs.</p>
+        <div class="region-grid region-grid-usa">
+          <div class="region-tile">
+            <span class="region-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></span>
+            <span class="region-name">In-Person Tutors – Portland, Maine</span>
+            <span class="region-desc">Portland &amp; area</span>
+            <div class="region-contact">
+              <p><span class="email-placeholder">[email placeholder]</span></p>
+            </div>
+          </div>
+          <div class="region-tile region-tile-online">
+            <span class="region-icon" aria-hidden="true"><i class="fas fa-laptop"></i></span>
+            <span class="region-name">Online</span>
+            <span class="region-desc">Throughout the USA</span>
+            <div class="region-contact">
+              <p><strong>Territory Manager:</strong> Noelle</p>
+              <p><a href="mailto:noelle@theteenagetutors.com">noelle@theteenagetutors.com</a></p>
+            </div>
+          </div>
         </div>
-        <div class="tutor-filters">
-          <label for="tutor-location">Location
-            <select id="tutor-location">
-              <option value="">All locations</option>
-              <option value="Portland, Maine">Portland, Maine</option>
-              <option value="Online">Online</option>
-            </select>
-          </label>
-          <label for="tutor-subject">Subject
-            <select id="tutor-subject">
-              <option value="">All subjects</option>
-              <option value="Math">Math</option>
-              <option value="English">English</option>
-              <option value="French">French</option>
-              <option value="Spanish">Spanish</option>
-              <option value="Science">Science</option>
-              <option value="Music">Music</option>
-              <option value="Computer">Computer Science</option>
-            </select>
-          </label>
-        </div>
-        <div id="usa-tutors"></div>
       </div>
     </section>
   </main>
@@ -161,7 +140,6 @@
       </div>
     </div>
   </footer>
-  <script src="js/tutors-data.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
