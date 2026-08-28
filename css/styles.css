@@ -1064,7 +1064,7 @@ textarea {
   color: var(--white);
   background:
     url("https://media.cwd-cdn.com/teenage-tutors/images/chalkboard-hero.jpg") center bottom / cover no-repeat;
-  padding: 4rem 1.25rem 5rem;
+  padding: 4rem 1.25rem clamp(5.5rem, 10vw, 7rem);
 }
 
 .signup-hero-kicker {
@@ -1086,7 +1086,7 @@ textarea {
 }
 
 .signup-hero-rates {
-  margin: 0 0 1.5rem;
+  margin: 0 auto clamp(1.5rem, 3vw, 2.5rem);
   font-family: var(--font-heading);
   font-size: 1rem;
   line-height: 1.55;
