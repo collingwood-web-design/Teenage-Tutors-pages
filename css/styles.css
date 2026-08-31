@@ -2085,8 +2085,9 @@ textarea {
 }
 
 .region-grid-usa {
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 640px;
+  grid-template-columns: 1fr;
+  max-width: 320px;
+  margin-inline: auto;
 }
 
 @media (max-width: 640px) {
