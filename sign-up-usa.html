@@ -2,12 +2,359 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=sign-up/usa/index.html">
-  <link rel="canonical" href="sign-up/usa/index.html">
-  <title>Redirecting...</title>
-  <script>location.replace("sign-up/usa/index.html");</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up — USA | Teenage Tutors</title>
+  <link rel="icon" href="https://media.cwd-cdn.com/teenage-tutors/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <p><a href="sign-up/usa/index.html">Continue</a></p>
+  <div class="topbar">
+    <div class="wrap">
+      <a href="tel:14164595618" aria-label="Call Teenage Tutors"><img src="https://media.cwd-cdn.com/teenage-tutors/images/icon-call.png" alt="Call"></a>
+      <a href="mailto:noelle@theteenagetutors.com" aria-label="Email Teenage Tutors"><img src="https://media.cwd-cdn.com/teenage-tutors/images/icon-email.png" alt="Email"></a>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html"><img src="https://media.cwd-cdn.com/teenage-tutors/images/logo.png" alt="Teenage Tutors"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="nav-toggle-bars" aria-hidden="true"><span></span></span><span class="nav-toggle-label">Menu</span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="has-sub">
+            <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Find a Tutor</a>
+            <ul class="sub">
+              <li><a href="find-a-tutor-canada.html" class="nav-country-canada"><img class="nav-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-canada.svg" alt="" width="22" height="15">Canada</a></li>
+              <li><a href="find-a-tutor-usa.html" class="nav-country-usa"><img class="nav-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-usa.svg" alt="" width="22" height="15">USA</a></li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a class="nav-cta-signup is-active" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sign Up</a>
+            <ul class="sub">
+              <li><a href="index.html" class="nav-country-canada"><img class="nav-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-canada.svg" alt="" width="22" height="15">Canada</a></li>
+              <li><a href="sign-up-usa.html" class="nav-country-usa is-active"><img class="nav-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-usa.svg" alt="" width="22" height="15">USA</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-cta-become" href="become-a-tutor.html">Become a Tutor</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#scholarship">Scholarship</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="signup-hero">
+      <div class="wrap">
+        <p class="signup-hero-kicker">Homework Help from Grade 1 to Grade 12</p>
+        <h1>Based in Portland, Maine for In-Person tutoring<br>Online throughout the USA</h1>
+        <p class="signup-hero-rates">High School Tutors: Online $38/hour &amp; In-Person $40/hour<br>University Tutors: Online $48/hour &amp; In-Person $50/hour</p>
+      </div>
+    </section>
+
+    <section class="section signup-intro">
+      <div class="wrap center">
+        <h2 class="section-title sketch-underline">Fill Out The Form Below To Get Started</h2>
+        <div class="signup-arrow" aria-hidden="true"><i class="fas fa-chevron-down"></i></div>
+      </div>
+    </section>
+
+    <section class="signup-form-section" id="signup-form">
+      <div class="wrap">
+        <form class="placeholder-form signup-form" action="#" method="post" aria-label="Sign up form">
+          <p class="form-note dark">You can fill this out now. Sending will be connected later.</p>
+
+          <div class="signup-block">
+            <h3 class="signup-block-title">Your contact info</h3>
+            <div class="form-row-2">
+              <div>
+                <label for="su-first">First Name <span class="req">*</span></label>
+                <input id="su-first" name="first" type="text" autocomplete="given-name" required>
+              </div>
+              <div>
+                <label for="su-last">Last Name <span class="req">*</span></label>
+                <input id="su-last" name="last" type="text" autocomplete="family-name" required>
+              </div>
+            </div>
+            <div class="form-row-2">
+              <div>
+                <label for="su-email">Email <span class="req">*</span></label>
+                <input id="su-email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div>
+                <label for="su-phone">Phone <span class="req">*</span></label>
+                <input id="su-phone" name="phone" type="tel" autocomplete="tel" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="signup-block">
+            <h3 class="signup-block-title">Address</h3>
+            <div>
+              <label for="su-street">Street Address</label>
+              <input id="su-street" name="street" type="text" autocomplete="address-line1">
+            </div>
+            <div>
+              <label for="su-street2">Address Line 2</label>
+              <input id="su-street2" name="street2" type="text" autocomplete="address-line2">
+            </div>
+            <div class="form-row-3">
+              <div>
+                <label for="su-city">City</label>
+                <input id="su-city" name="city" type="text" autocomplete="address-level2">
+              </div>
+              <div>
+                <label for="su-state">State</label>
+                <select id="su-state" name="state" autocomplete="address-level1">
+                  <option value="">Select state</option>
+                  <option>Alabama</option>
+                  <option>Alaska</option>
+                  <option>Arizona</option>
+                  <option>Arkansas</option>
+                  <option>California</option>
+                  <option>Colorado</option>
+                  <option>Connecticut</option>
+                  <option>Delaware</option>
+                  <option>District of Columbia</option>
+                  <option>Florida</option>
+                  <option>Georgia</option>
+                  <option>Hawaii</option>
+                  <option>Idaho</option>
+                  <option>Illinois</option>
+                  <option>Indiana</option>
+                  <option>Iowa</option>
+                  <option>Kansas</option>
+                  <option>Kentucky</option>
+                  <option>Louisiana</option>
+                  <option>Maine</option>
+                  <option>Maryland</option>
+                  <option>Massachusetts</option>
+                  <option>Michigan</option>
+                  <option>Minnesota</option>
+                  <option>Mississippi</option>
+                  <option>Missouri</option>
+                  <option>Montana</option>
+                  <option>Nebraska</option>
+                  <option>Nevada</option>
+                  <option>New Hampshire</option>
+                  <option>New Jersey</option>
+                  <option>New Mexico</option>
+                  <option>New York</option>
+                  <option>North Carolina</option>
+                  <option>North Dakota</option>
+                  <option>Ohio</option>
+                  <option>Oklahoma</option>
+                  <option>Oregon</option>
+                  <option>Pennsylvania</option>
+                  <option>Rhode Island</option>
+                  <option>South Carolina</option>
+                  <option>South Dakota</option>
+                  <option>Tennessee</option>
+                  <option>Texas</option>
+                  <option>Utah</option>
+                  <option>Vermont</option>
+                  <option>Virginia</option>
+                  <option>Washington</option>
+                  <option>West Virginia</option>
+                  <option>Wisconsin</option>
+                  <option>Wyoming</option>
+                </select>
+              </div>
+              <div>
+                <label for="su-zip">Zip</label>
+                <input id="su-zip" name="zip" type="text" autocomplete="postal-code">
+              </div>
+            </div>
+            <div>
+              <label for="su-country">Country</label>
+              <select id="su-country" name="country" autocomplete="country-name">
+                <option value="">Select country</option>
+                <option>Canada</option>
+                <option selected>United States</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="signup-block">
+            <h3 class="signup-block-title">Tutoring preferences</h3>
+            <fieldset>
+              <legend>Preference <span class="req">*</span></legend>
+              <div class="choice-grid choice-grid-2">
+                <label class="choice-chip">
+                  <input type="radio" name="preference" value="IN-PERSON" required>
+                  <span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> IN-PERSON</span>
+                </label>
+                <label class="choice-chip">
+                  <input type="radio" name="preference" value="ONLINE">
+                  <span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> ONLINE</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div>
+              <label for="su-grade">What grade is your child currently attending? <span class="req">*</span></label>
+              <input id="su-grade" name="grade" type="text" required placeholder="e.g. Grade 8">
+            </div>
+
+            <fieldset>
+              <legend>Subjects needed <span class="req">*</span></legend>
+              <div class="choice-grid choice-grid-3">
+                <label class="choice-chip"><input type="checkbox" name="subjects" value="Math"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Math</span></label>
+                <label class="choice-chip"><input type="checkbox" name="subjects" value="English"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> English</span></label>
+                <label class="choice-chip"><input type="checkbox" name="subjects" value="French"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> French</span></label>
+                <label class="choice-chip"><input type="checkbox" name="subjects" value="Spanish"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Spanish</span></label>
+                <label class="choice-chip"><input type="checkbox" name="subjects" value="Science"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Science</span></label>
+                <label class="choice-chip"><input type="checkbox" name="subjects" value="Music"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Music</span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="signup-block">
+            <h3 class="signup-block-title">Availability</h3>
+            <fieldset>
+              <legend>Day preference <span class="req">*</span></legend>
+              <div class="choice-grid choice-grid-days">
+                <label class="choice-chip"><input type="checkbox" name="days" value="Monday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Mon</span></label>
+                <label class="choice-chip"><input type="checkbox" name="days" value="Tuesday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Tue</span></label>
+                <label class="choice-chip"><input type="checkbox" name="days" value="Wednesday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Wed</span></label>
+                <label class="choice-chip"><input type="checkbox" name="days" value="Thursday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Thu</span></label>
+                <label class="choice-chip"><input type="checkbox" name="days" value="Friday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Fri</span></label>
+                <label class="choice-chip"><input type="checkbox" name="days" value="Saturday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Sat</span></label>
+                <label class="choice-chip"><input type="checkbox" name="days" value="Sunday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Sun</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Preferred time slots <span class="req">*</span></legend>
+              <div class="choice-grid choice-grid-1">
+                <label class="choice-chip"><input type="checkbox" name="slots" value="Morning"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Morning (9AM–12PM)</span></label>
+                <label class="choice-chip"><input type="checkbox" name="slots" value="Afternoon"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Afternoon (12PM–5PM)</span></label>
+                <label class="choice-chip"><input type="checkbox" name="slots" value="Evening"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Evening (5PM–8PM)</span></label>
+              </div>
+            </fieldset>
+
+            <div>
+              <label for="su-times">Specific preferred times</label>
+              <input id="su-times" name="specific_times" type="text" placeholder="e.g. Tuesdays after 4pm">
+            </div>
+          </div>
+
+          <div class="signup-block signup-extra">
+            <h3 class="signup-extra-title">To help us match your child with the right tutor, please answer the following questions:</h3>
+            <div>
+              <label for="su-gender">Does your child prefer a male or female tutor, or are they comfortable with either? <span class="req">*</span></label>
+              <select id="su-gender" name="gender" required>
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Either</option>
+              </select>
+            </div>
+            <div>
+              <label for="su-same-grade">If your child is in grade 10 or above, are they willing to have a tutor in the same grade? (*n/a if not applicable) <span class="req">*</span></label>
+              <select id="su-same-grade" name="same_grade" required>
+                <option value="">Select</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>N/A</option>
+              </select>
+            </div>
+            <div>
+              <label for="su-same-school">Is your child willing to have a tutor at the same school they attend? (*applicable if your child is in high school) <span class="req">*</span></label>
+              <select id="su-same-school" name="same_school" required>
+                <option value="">Select</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>N/A</option>
+              </select>
+            </div>
+            <div>
+              <label for="su-heard">How did you hear about us?</label>
+              <textarea id="su-heard" name="heard" rows="3"></textarea>
+            </div>
+            <div>
+              <label for="su-about">Tell us a little bit about your child and what they need help with.</label>
+              <textarea id="su-about" name="about" rows="5"></textarea>
+            </div>
+          </div>
+
+          <p class="form-status" id="signup-status" hidden role="status"></p>
+          <button class="btn-send" type="submit">Send</button>
+        </form>
+
+        <div class="signup-policy">
+          <p>It is our policy at Teenage Tutors to meet the family before the first session. At this time, we can better understand your needs for your child and to answer any questions you may have regarding our company.</p>
+          <p>Please make sure your child is prepared with material to be covered during the tutoring session, (ie. previous tests, worksheets, homework and textbooks)</p>
+          <p>We charge a competitive rate of $38.00/hour for online, high school tutors and $40.00/hour for in-person, high school tutors and $48.00/hour for online, university tutors and $50.00/hour for in-person, university tutors.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-info">
+        <img class="footer-logo" src="https://media.cwd-cdn.com/teenage-tutors/images/logo-footer.png" alt="Teenage Tutors">
+        <h3>Do you have any questions?</h3>
+        <p class="footer-lead">Don't be shy!</p>
+        <p class="footer-copy">Please call Noelle or fill out the form. We look forward to hearing from you!</p>
+        <p class="footer-contact"><a href="tel:14164595618"><i class="fas fa-phone" aria-hidden="true"></i><span>(416) 459-5618</span></a></p>
+        <p class="footer-contact privacy"><a href="privacy-policy.html"><i class="fas fa-edit" aria-hidden="true"></i><span>Privacy Policy</span></a></p>
+        <div class="social">
+          <a href="https://www.facebook.com/theteenagetutors/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/theteenagetutors" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer-form">
+        <form class="placeholder-form contact-form" action="#" method="post" aria-label="Contact form">
+          <p class="form-note">You can fill this out now. Sending will be connected later.</p>
+          <div class="form-row-2">
+            <div>
+              <label for="c-first">First Name <span class="req">*</span></label>
+              <input id="c-first" name="first" type="text" autocomplete="given-name" required>
+            </div>
+            <div>
+              <label for="c-last">Last Name <span class="req">*</span></label>
+              <input id="c-last" name="last" type="text" autocomplete="family-name" required>
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div>
+              <label for="c-email">Email <span class="req">*</span></label>
+              <input id="c-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div>
+              <label for="c-phone">Phone <span class="req">*</span></label>
+              <input id="c-phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
+          </div>
+          <div>
+            <label for="c-subject">Subject</label>
+            <input id="c-subject" name="subject" type="text">
+          </div>
+          <div>
+            <label for="c-message">Message <span class="req">*</span></label>
+            <textarea id="c-message" name="message" rows="4" required></textarea>
+          </div>
+          <p class="form-status" hidden role="status"></p>
+          <button class="btn-send" type="submit">Send</button>
+        </form>
+        <span class="form-smiley" aria-hidden="true">☺</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="wrap">
+        <p>A local business and community partnership, Teenage Tutors is a federally incorporated company established in 2011.</p>
+        <p>Copyright © | <span id="year"></span> | Teenage Tutors</p>
+        <p>Design &amp; Develop | <a href="https://www.collingwoodwebdesign.com/" target="_blank" rel="noopener noreferrer">Collingwood WEB Design</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
