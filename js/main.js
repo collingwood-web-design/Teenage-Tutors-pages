@@ -318,4 +318,80 @@
   }
 
   initLogoMarquee();
+
+  (function initFormSuccessModal() {
+    var modal = null;
+    var lastFocus = null;
+
+    function ensureModal() {
+      if (modal) {
+        return modal;
+      }
+
+      modal = document.createElement("div");
+      modal.className = "form-success-modal";
+      modal.id = "form-success-modal";
+      modal.hidden = true;
+      modal.setAttribute("role", "dialog");
+      modal.setAttribute("aria-modal", "true");
+      modal.setAttribute("aria-labelledby", "form-success-title");
+      modal.innerHTML =
+        '<div class="form-success-modal-backdrop" data-close-modal></div>' +
+        '<div class="form-success-modal-card">' +
+        '<button type="button" class="form-success-modal-close" aria-label="Close">&times;</button>' +
+        '<div class="form-success-modal-icon" aria-hidden="true"><i class="fas fa-check"></i></div>' +
+        '<h2 id="form-success-title" class="form-success-modal-title">Message sent!</h2>' +
+        '<p class="form-success-modal-message"></p>' +
+        "</div>";
+
+      document.body.appendChild(modal);
+
+      modal.querySelector(".form-success-modal-close").addEventListener("click", closeModal);
+      modal.querySelector("[data-close-modal]").addEventListener("click", closeModal);
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && modal && !modal.hidden) {
+          closeModal();
+        }
+      });
+
+      return modal;
+    }
+
+    function openModal(message) {
+      var el = ensureModal();
+      var text = el.querySelector(".form-success-modal-message");
+      if (text) {
+        text.textContent = message || "Thank you — your message has been sent.";
+      }
+      lastFocus = document.activeElement;
+      el.hidden = false;
+      document.body.classList.add("form-success-modal-open");
+      var closeBtn = el.querySelector(".form-success-modal-close");
+      if (closeBtn) {
+        closeBtn.focus();
+      }
+    }
+
+    function closeModal() {
+      if (!modal || modal.hidden) {
+        return;
+      }
+      modal.hidden = true;
+      document.body.classList.remove("form-success-modal-open");
+      if (lastFocus && typeof lastFocus.focus === "function") {
+        lastFocus.focus();
+      }
+    }
+
+    document.addEventListener("cwd-contact:success", function (e) {
+      var detail = e.detail || {};
+      openModal(detail.message);
+    });
+  })();
 })();

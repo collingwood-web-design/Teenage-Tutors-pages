@@ -244,7 +244,7 @@
       }
 
       var successMessage = "Thank you — your message has been sent.";
-      setStatus(root, successMessage, false);
+      setStatus(root, "", false);
       dispatchContactEvent(root, "cwd-contact:success", {
         ok: true,
         message: successMessage,
