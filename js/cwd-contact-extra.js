@@ -1,7 +1,8 @@
 /**
- * Binds additional CWD contact forms on pages that have more than one form.
- * The shared cwd-contact.js only attaches to #contact-form (one per page).
- * Forms marked with data-cwd-contact use the same Railway API contract.
+ * CWD contact form binder for Teenage Tutors.
+ * Binds #contact-form and form[data-cwd-contact], consolidates checkbox
+ * groups (same name) into one field so submissions stay under the API's
+ * 20-field limit, then POSTs to the shared Railway contact service.
  */
 (function () {
   "use strict";
@@ -77,10 +78,34 @@
         value = el.value || "";
       }
 
+      if (!String(value).trim()) {
+        continue;
+      }
+
       fields.push({ name: name, label: name, value: value });
     }
 
-    return { fields: fields, honeypot: honeypot };
+    return { fields: consolidateFields(fields), honeypot: honeypot };
+  }
+
+  function consolidateFields(fields) {
+    var grouped = [];
+    var indexByName = Object.create(null);
+
+    for (var i = 0; i < fields.length; i++) {
+      var field = fields[i];
+      var key = field.name;
+      if (indexByName[key] === undefined) {
+        indexByName[key] = grouped.length;
+        grouped.push({ name: field.name, label: field.label, value: field.value });
+        continue;
+      }
+
+      var existing = grouped[indexByName[key]];
+      existing.value = existing.value + ", " + field.value;
+    }
+
+    return grouped;
   }
 
   function resetRoot(root) {
@@ -161,6 +186,10 @@
   }
 
   function init() {
+    var primary = document.getElementById("contact-form");
+    if (primary) {
+      bindRoot(primary);
+    }
     document.querySelectorAll("form[data-cwd-contact]").forEach(bindRoot);
   }
 
