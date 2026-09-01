@@ -66,17 +66,6 @@
     });
   });
 
-  document.querySelectorAll("form.placeholder-form").forEach(function (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var status = form.querySelector(".form-status");
-      if (status) {
-        status.hidden = false;
-        status.textContent = "Thanks — your details look ready. Form sending will be connected soon.";
-      }
-    });
-  });
-
   function renderTutors(list, containerId) {
     var root = document.getElementById(containerId);
     if (!root || !Array.isArray(list)) return;

@@ -121,29 +121,29 @@
 
     <section class="signup-form-section" id="applynow">
       <div class="wrap">
-        <form class="placeholder-form signup-form" action="#" method="post" aria-label="Become a tutor application">
-          <p class="form-note dark">You can fill this out now. Sending will be connected later.</p>
+        <form id="contact-form" class="signup-form" aria-label="Become a tutor application">
+          <input type="hidden" name="Form Type" value="Become a Tutor Application">
 
           <div class="signup-block">
             <h3 class="signup-block-title">Your contact info</h3>
             <div class="form-row-2">
               <div>
                 <label for="bt-first">First Name <span class="req">*</span></label>
-                <input id="bt-first" name="first" type="text" autocomplete="given-name" required>
+                <input id="bt-first" name="First Name" type="text" autocomplete="given-name" required>
               </div>
               <div>
                 <label for="bt-last">Last Name <span class="req">*</span></label>
-                <input id="bt-last" name="last" type="text" autocomplete="family-name" required>
+                <input id="bt-last" name="Last Name" type="text" autocomplete="family-name" required>
               </div>
             </div>
             <div class="form-row-2">
               <div>
                 <label for="bt-email">Email <span class="req">*</span></label>
-                <input id="bt-email" name="email" type="email" autocomplete="email" required>
+                <input id="bt-email" name="Email" type="email" autocomplete="email" required>
               </div>
               <div>
                 <label for="bt-phone">Phone <span class="req">*</span></label>
-                <input id="bt-phone" name="phone" type="tel" autocomplete="tel" required>
+                <input id="bt-phone" name="Phone" type="tel" autocomplete="tel" required>
               </div>
             </div>
           </div>
@@ -152,29 +152,29 @@
             <h3 class="signup-block-title">Address</h3>
             <div>
               <label for="bt-street">Street Address</label>
-              <input id="bt-street" name="street" type="text" autocomplete="address-line1">
+              <input id="bt-street" name="Street Address" type="text" autocomplete="address-line1">
             </div>
             <div>
               <label for="bt-street2">Address Line 2</label>
-              <input id="bt-street2" name="street2" type="text" autocomplete="address-line2">
+              <input id="bt-street2" name="Address Line 2" type="text" autocomplete="address-line2">
             </div>
             <div class="form-row-3">
               <div>
                 <label for="bt-city">City</label>
-                <input id="bt-city" name="city" type="text" autocomplete="address-level2">
+                <input id="bt-city" name="City" type="text" autocomplete="address-level2">
               </div>
               <div>
                 <label for="bt-province">Province/State</label>
-                <input id="bt-province" name="province" type="text" autocomplete="address-level1">
+                <input id="bt-province" name="Province/State" type="text" autocomplete="address-level1">
               </div>
               <div>
                 <label for="bt-postal">Postal Code/Zip</label>
-                <input id="bt-postal" name="postal" type="text" autocomplete="postal-code">
+                <input id="bt-postal" name="Postal Code/Zip" type="text" autocomplete="postal-code">
               </div>
             </div>
             <div>
               <label for="bt-country">Country</label>
-              <select id="bt-country" name="country" autocomplete="country-name">
+              <select id="bt-country" name="Country" autocomplete="country-name">
                 <option value="">Select country</option>
                 <option selected>Canada</option>
                 <option>United States</option>
@@ -187,25 +187,25 @@
             <fieldset>
               <legend>What grade are you in? <span class="req">*</span></legend>
               <div class="choice-grid choice-grid-4">
-                <label class="choice-chip"><input type="radio" name="grade" value="10" required><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> 10</span></label>
-                <label class="choice-chip"><input type="radio" name="grade" value="11"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> 11</span></label>
-                <label class="choice-chip"><input type="radio" name="grade" value="12"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> 12</span></label>
-                <label class="choice-chip"><input type="radio" name="grade" value="Post-Secondary"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Post-Secondary</span></label>
+                <label class="choice-chip"><input type="radio" name="Grade" value="10" required><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> 10</span></label>
+                <label class="choice-chip"><input type="radio" name="Grade" value="11"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> 11</span></label>
+                <label class="choice-chip"><input type="radio" name="Grade" value="12"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> 12</span></label>
+                <label class="choice-chip"><input type="radio" name="Grade" value="Post-Secondary"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Post-Secondary</span></label>
               </div>
             </fieldset>
             <div>
               <label for="bt-school">Your High School Name &amp; City <span class="req">*</span></label>
-              <input id="bt-school" name="school" type="text" required>
+              <input id="bt-school" name="High School Name and City" type="text" required>
             </div>
             <fieldset>
               <legend>What subjects do you prefer to tutor?</legend>
               <div class="choice-grid choice-grid-3">
-                <label class="choice-chip"><input type="checkbox" name="subjects" value="English"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> English</span></label>
-                <label class="choice-chip"><input type="checkbox" name="subjects" value="French"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> French</span></label>
-                <label class="choice-chip"><input type="checkbox" name="subjects" value="Math"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Math</span></label>
-                <label class="choice-chip"><input type="checkbox" name="subjects" value="Science"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Science</span></label>
-                <label class="choice-chip"><input type="checkbox" name="subjects" value="Spanish"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Spanish</span></label>
-                <label class="choice-chip"><input type="checkbox" name="subjects" value="Music"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Music</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Subjects" value="English"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> English</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Subjects" value="French"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> French</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Subjects" value="Math"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Math</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Subjects" value="Science"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Science</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Subjects" value="Spanish"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Spanish</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Subjects" value="Music"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Music</span></label>
               </div>
             </fieldset>
           </div>
@@ -215,52 +215,48 @@
             <fieldset>
               <legend>Day preference <span class="req">*</span></legend>
               <div class="choice-grid choice-grid-days">
-                <label class="choice-chip"><input type="checkbox" name="days" value="Monday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Mon</span></label>
-                <label class="choice-chip"><input type="checkbox" name="days" value="Tuesday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Tue</span></label>
-                <label class="choice-chip"><input type="checkbox" name="days" value="Wednesday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Wed</span></label>
-                <label class="choice-chip"><input type="checkbox" name="days" value="Thursday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Thu</span></label>
-                <label class="choice-chip"><input type="checkbox" name="days" value="Friday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Fri</span></label>
-                <label class="choice-chip"><input type="checkbox" name="days" value="Saturday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Sat</span></label>
-                <label class="choice-chip"><input type="checkbox" name="days" value="Sunday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Sun</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Day Preference" value="Monday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Mon</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Day Preference" value="Tuesday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Tue</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Day Preference" value="Wednesday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Wed</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Day Preference" value="Thursday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Thu</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Day Preference" value="Friday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Fri</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Day Preference" value="Saturday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Sat</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Day Preference" value="Sunday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Sun</span></label>
               </div>
             </fieldset>
             <fieldset>
               <legend>Preferred time slots <span class="req">*</span></legend>
               <div class="choice-grid choice-grid-1">
-                <label class="choice-chip"><input type="checkbox" name="slots" value="Morning"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Morning (9AM–12PM)</span></label>
-                <label class="choice-chip"><input type="checkbox" name="slots" value="Afternoon"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Afternoon (12PM–5PM)</span></label>
-                <label class="choice-chip"><input type="checkbox" name="slots" value="Evening"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Evening (5PM–8PM)</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Preferred Time Slots" value="Morning"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Morning (9AM–12PM)</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Preferred Time Slots" value="Afternoon"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Afternoon (12PM–5PM)</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Preferred Time Slots" value="Evening"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Evening (5PM–8PM)</span></label>
               </div>
             </fieldset>
             <div>
               <label for="bt-times">Specific preferred times <span class="req">*</span></label>
-              <input id="bt-times" name="specific_times" type="text" required placeholder="e.g. Weeknights after 5pm">
+              <input id="bt-times" name="Specific Preferred Times" type="text" required placeholder="e.g. Weeknights after 5pm">
             </div>
           </div>
 
           <div class="signup-block signup-extra">
             <h3 class="signup-extra-title">Uploads &amp; about you</h3>
+            <p class="form-note dark">Report card and resume PDFs cannot be uploaded here. Please email them to Teenage Tutors after you submit this application.</p>
             <div>
-              <label for="bt-report">Upload Recent Report Card (PDF) <span class="req">*</span></label>
-              <input id="bt-report" name="report_card" type="file" accept="application/pdf" required>
-              <span class="sublabel">Maximum file size: 8MB</span>
-            </div>
-            <div>
-              <label for="bt-resume">Upload resumé (PDF) <span class="req">*</span></label>
-              <input id="bt-resume" name="resume" type="file" accept="application/pdf" required>
-              <span class="sublabel">Maximum file size: 8MB</span>
+              <label for="bt-docs">Report card and resume note</label>
+              <textarea id="bt-docs" name="Report Card and Resume Note" rows="3" placeholder="Optional — let us know if you will email your PDFs separately."></textarea>
             </div>
             <div>
               <label for="bt-heard">How did you hear about us?</label>
-              <input id="bt-heard" name="heard" type="text">
+              <input id="bt-heard" name="How Did You Hear About Us" type="text">
             </div>
             <div>
               <label for="bt-about">Tell us a little bit about yourself.</label>
-              <textarea id="bt-about" name="about" rows="5"></textarea>
+              <textarea id="bt-about" name="About You" rows="5"></textarea>
             </div>
           </div>
 
-          <p class="form-status" hidden role="status"></p>
+          <input type="text" name="website" data-cwd-honeypot tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">
+          <p data-cwd-contact-status hidden role="status" aria-live="polite"></p>
           <button class="btn-send" type="submit">Send</button>
         </form>
       </div>
@@ -297,37 +293,38 @@
         </div>
       </div>
       <div class="footer-form">
-        <form class="placeholder-form contact-form" action="#" method="post" aria-label="Contact form">
-          <p class="form-note">You can fill this out now. Sending will be connected later.</p>
+        <form data-cwd-contact class="contact-form" aria-label="Contact form">
+          <input type="hidden" name="Form Type" value="Contact">
           <div class="form-row-2">
             <div>
               <label for="c-first">First Name <span class="req">*</span></label>
-              <input id="c-first" name="first" type="text" autocomplete="given-name" required>
+              <input id="c-first" name="First Name" type="text" autocomplete="given-name" required>
             </div>
             <div>
               <label for="c-last">Last Name <span class="req">*</span></label>
-              <input id="c-last" name="last" type="text" autocomplete="family-name" required>
+              <input id="c-last" name="Last Name" type="text" autocomplete="family-name" required>
             </div>
           </div>
           <div class="form-row-2">
             <div>
               <label for="c-email">Email <span class="req">*</span></label>
-              <input id="c-email" name="email" type="email" autocomplete="email" required>
+              <input id="c-email" name="Email" type="email" autocomplete="email" required>
             </div>
             <div>
               <label for="c-phone">Phone <span class="req">*</span></label>
-              <input id="c-phone" name="phone" type="tel" autocomplete="tel" required>
+              <input id="c-phone" name="Phone" type="tel" autocomplete="tel" required>
             </div>
           </div>
           <div>
             <label for="c-subject">Subject</label>
-            <input id="c-subject" name="subject" type="text">
+            <input id="c-subject" name="Subject" type="text">
           </div>
           <div>
             <label for="c-message">Message <span class="req">*</span></label>
-            <textarea id="c-message" name="message" rows="4" required></textarea>
+            <textarea id="c-message" name="Message" rows="4" required></textarea>
           </div>
-          <p class="form-status" hidden role="status"></p>
+          <input type="text" name="website" data-cwd-honeypot tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">
+          <p data-cwd-contact-status hidden role="status" aria-live="polite"></p>
           <button class="btn-send" type="submit">Send</button>
         </form>
         <span class="form-smiley" aria-hidden="true">☺</span>
@@ -341,6 +338,8 @@
       </div>
     </div>
   </footer>
+  <script src="https://web-production-54a6d.up.railway.app/static/cwd-contact.js"></script>
+  <script src="js/cwd-contact-extra.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

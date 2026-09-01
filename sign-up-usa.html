@@ -66,29 +66,29 @@
 
     <section class="signup-form-section" id="signup-form">
       <div class="wrap">
-        <form class="placeholder-form signup-form" action="#" method="post" aria-label="Sign up form">
-          <p class="form-note dark">You can fill this out now. Sending will be connected later.</p>
+        <form id="contact-form" class="signup-form" aria-label="Sign up form">
+          <input type="hidden" name="Form Type" value="Sign Up (USA)">
 
           <div class="signup-block">
             <h3 class="signup-block-title">Your contact info</h3>
             <div class="form-row-2">
               <div>
                 <label for="su-first">First Name <span class="req">*</span></label>
-                <input id="su-first" name="first" type="text" autocomplete="given-name" required>
+                <input id="su-first" name="First Name" type="text" autocomplete="given-name" required>
               </div>
               <div>
                 <label for="su-last">Last Name <span class="req">*</span></label>
-                <input id="su-last" name="last" type="text" autocomplete="family-name" required>
+                <input id="su-last" name="Last Name" type="text" autocomplete="family-name" required>
               </div>
             </div>
             <div class="form-row-2">
               <div>
                 <label for="su-email">Email <span class="req">*</span></label>
-                <input id="su-email" name="email" type="email" autocomplete="email" required>
+                <input id="su-email" name="Email" type="email" autocomplete="email" required>
               </div>
               <div>
                 <label for="su-phone">Phone <span class="req">*</span></label>
-                <input id="su-phone" name="phone" type="tel" autocomplete="tel" required>
+                <input id="su-phone" name="Phone" type="tel" autocomplete="tel" required>
               </div>
             </div>
           </div>
@@ -97,20 +97,20 @@
             <h3 class="signup-block-title">Address</h3>
             <div>
               <label for="su-street">Street Address</label>
-              <input id="su-street" name="street" type="text" autocomplete="address-line1">
+              <input id="su-street" name="Street Address" type="text" autocomplete="address-line1">
             </div>
             <div>
               <label for="su-street2">Address Line 2</label>
-              <input id="su-street2" name="street2" type="text" autocomplete="address-line2">
+              <input id="su-street2" name="Address Line 2" type="text" autocomplete="address-line2">
             </div>
             <div class="form-row-3">
               <div>
                 <label for="su-city">City</label>
-                <input id="su-city" name="city" type="text" autocomplete="address-level2">
+                <input id="su-city" name="City" type="text" autocomplete="address-level2">
               </div>
               <div>
                 <label for="su-state">State</label>
-                <select id="su-state" name="state" autocomplete="address-level1">
+                <select id="su-state" name="State" autocomplete="address-level1">
                   <option value="">Select state</option>
                   <option>Alabama</option>
                   <option>Alaska</option>
@@ -167,12 +167,12 @@
               </div>
               <div>
                 <label for="su-zip">Zip</label>
-                <input id="su-zip" name="zip" type="text" autocomplete="postal-code">
+                <input id="su-zip" name="Zip" type="text" autocomplete="postal-code">
               </div>
             </div>
             <div>
               <label for="su-country">Country</label>
-              <select id="su-country" name="country" autocomplete="country-name">
+              <select id="su-country" name="Country" autocomplete="country-name">
                 <option value="">Select country</option>
                 <option>Canada</option>
                 <option selected>United States</option>
@@ -186,11 +186,11 @@
               <legend>Preference <span class="req">*</span></legend>
               <div class="choice-grid choice-grid-2">
                 <label class="choice-chip">
-                  <input type="radio" name="preference" value="IN-PERSON" required>
+                  <input type="radio" name="Preference" value="IN-PERSON" required>
                   <span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> IN-PERSON</span>
                 </label>
                 <label class="choice-chip">
-                  <input type="radio" name="preference" value="ONLINE">
+                  <input type="radio" name="Preference" value="ONLINE">
                   <span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> ONLINE</span>
                 </label>
               </div>
@@ -198,18 +198,18 @@
 
             <div>
               <label for="su-grade">What grade is your child currently attending? <span class="req">*</span></label>
-              <input id="su-grade" name="grade" type="text" required placeholder="e.g. Grade 8">
+              <input id="su-grade" name="Child Grade" type="text" required placeholder="e.g. Grade 8">
             </div>
 
             <fieldset>
               <legend>Subjects needed <span class="req">*</span></legend>
               <div class="choice-grid choice-grid-3">
-                <label class="choice-chip"><input type="checkbox" name="subjects" value="Math"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Math</span></label>
-                <label class="choice-chip"><input type="checkbox" name="subjects" value="English"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> English</span></label>
-                <label class="choice-chip"><input type="checkbox" name="subjects" value="French"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> French</span></label>
-                <label class="choice-chip"><input type="checkbox" name="subjects" value="Spanish"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Spanish</span></label>
-                <label class="choice-chip"><input type="checkbox" name="subjects" value="Science"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Science</span></label>
-                <label class="choice-chip"><input type="checkbox" name="subjects" value="Music"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Music</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Subjects" value="Math"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Math</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Subjects" value="English"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> English</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Subjects" value="French"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> French</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Subjects" value="Spanish"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Spanish</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Subjects" value="Science"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Science</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Subjects" value="Music"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Music</span></label>
               </div>
             </fieldset>
           </div>
@@ -219,28 +219,28 @@
             <fieldset>
               <legend>Day preference <span class="req">*</span></legend>
               <div class="choice-grid choice-grid-days">
-                <label class="choice-chip"><input type="checkbox" name="days" value="Monday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Mon</span></label>
-                <label class="choice-chip"><input type="checkbox" name="days" value="Tuesday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Tue</span></label>
-                <label class="choice-chip"><input type="checkbox" name="days" value="Wednesday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Wed</span></label>
-                <label class="choice-chip"><input type="checkbox" name="days" value="Thursday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Thu</span></label>
-                <label class="choice-chip"><input type="checkbox" name="days" value="Friday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Fri</span></label>
-                <label class="choice-chip"><input type="checkbox" name="days" value="Saturday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Sat</span></label>
-                <label class="choice-chip"><input type="checkbox" name="days" value="Sunday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Sun</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Day Preference" value="Monday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Mon</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Day Preference" value="Tuesday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Tue</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Day Preference" value="Wednesday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Wed</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Day Preference" value="Thursday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Thu</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Day Preference" value="Friday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Fri</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Day Preference" value="Saturday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Sat</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Day Preference" value="Sunday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Sun</span></label>
               </div>
             </fieldset>
 
             <fieldset>
               <legend>Preferred time slots <span class="req">*</span></legend>
               <div class="choice-grid choice-grid-1">
-                <label class="choice-chip"><input type="checkbox" name="slots" value="Morning"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Morning (9AM–12PM)</span></label>
-                <label class="choice-chip"><input type="checkbox" name="slots" value="Afternoon"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Afternoon (12PM–5PM)</span></label>
-                <label class="choice-chip"><input type="checkbox" name="slots" value="Evening"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Evening (5PM–8PM)</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Preferred Time Slots" value="Morning"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Morning (9AM–12PM)</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Preferred Time Slots" value="Afternoon"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Afternoon (12PM–5PM)</span></label>
+                <label class="choice-chip"><input type="checkbox" name="Preferred Time Slots" value="Evening"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Evening (5PM–8PM)</span></label>
               </div>
             </fieldset>
 
             <div>
               <label for="su-times">Specific preferred times</label>
-              <input id="su-times" name="specific_times" type="text" placeholder="e.g. Tuesdays after 4pm">
+              <input id="su-times" name="Specific Preferred Times" type="text" placeholder="e.g. Tuesdays after 4pm">
             </div>
           </div>
 
@@ -248,7 +248,7 @@
             <h3 class="signup-extra-title">To help us match your child with the right tutor, please answer the following questions:</h3>
             <div>
               <label for="su-gender">Does your child prefer a male or female tutor, or are they comfortable with either? <span class="req">*</span></label>
-              <select id="su-gender" name="gender" required>
+              <select id="su-gender" name="Tutor Gender Preference" required>
                 <option value="">Select</option>
                 <option>Male</option>
                 <option>Female</option>
@@ -257,7 +257,7 @@
             </div>
             <div>
               <label for="su-same-grade">If your child is in grade 10 or above, are they willing to have a tutor in the same grade? (*n/a if not applicable) <span class="req">*</span></label>
-              <select id="su-same-grade" name="same_grade" required>
+              <select id="su-same-grade" name="Same Grade Tutor OK" required>
                 <option value="">Select</option>
                 <option>Yes</option>
                 <option>No</option>
@@ -266,7 +266,7 @@
             </div>
             <div>
               <label for="su-same-school">Is your child willing to have a tutor at the same school they attend? (*applicable if your child is in high school) <span class="req">*</span></label>
-              <select id="su-same-school" name="same_school" required>
+              <select id="su-same-school" name="Same School Tutor OK" required>
                 <option value="">Select</option>
                 <option>Yes</option>
                 <option>No</option>
@@ -275,15 +275,16 @@
             </div>
             <div>
               <label for="su-heard">How did you hear about us?</label>
-              <textarea id="su-heard" name="heard" rows="3"></textarea>
+              <textarea id="su-heard" name="How Did You Hear About Us" rows="3"></textarea>
             </div>
             <div>
               <label for="su-about">Tell us a little bit about your child and what they need help with.</label>
-              <textarea id="su-about" name="about" rows="5"></textarea>
+              <textarea id="su-about" name="About Your Child" rows="5"></textarea>
             </div>
           </div>
 
-          <p class="form-status" id="signup-status" hidden role="status"></p>
+          <input type="text" name="website" data-cwd-honeypot tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">
+          <p data-cwd-contact-status hidden role="status" aria-live="polite"></p>
           <button class="btn-send" type="submit">Send</button>
         </form>
 
@@ -311,37 +312,38 @@
         </div>
       </div>
       <div class="footer-form">
-        <form class="placeholder-form contact-form" action="#" method="post" aria-label="Contact form">
-          <p class="form-note">You can fill this out now. Sending will be connected later.</p>
+        <form data-cwd-contact class="contact-form" aria-label="Contact form">
+          <input type="hidden" name="Form Type" value="Contact">
           <div class="form-row-2">
             <div>
               <label for="c-first">First Name <span class="req">*</span></label>
-              <input id="c-first" name="first" type="text" autocomplete="given-name" required>
+              <input id="c-first" name="First Name" type="text" autocomplete="given-name" required>
             </div>
             <div>
               <label for="c-last">Last Name <span class="req">*</span></label>
-              <input id="c-last" name="last" type="text" autocomplete="family-name" required>
+              <input id="c-last" name="Last Name" type="text" autocomplete="family-name" required>
             </div>
           </div>
           <div class="form-row-2">
             <div>
               <label for="c-email">Email <span class="req">*</span></label>
-              <input id="c-email" name="email" type="email" autocomplete="email" required>
+              <input id="c-email" name="Email" type="email" autocomplete="email" required>
             </div>
             <div>
               <label for="c-phone">Phone <span class="req">*</span></label>
-              <input id="c-phone" name="phone" type="tel" autocomplete="tel" required>
+              <input id="c-phone" name="Phone" type="tel" autocomplete="tel" required>
             </div>
           </div>
           <div>
             <label for="c-subject">Subject</label>
-            <input id="c-subject" name="subject" type="text">
+            <input id="c-subject" name="Subject" type="text">
           </div>
           <div>
             <label for="c-message">Message <span class="req">*</span></label>
-            <textarea id="c-message" name="message" rows="4" required></textarea>
+            <textarea id="c-message" name="Message" rows="4" required></textarea>
           </div>
-          <p class="form-status" hidden role="status"></p>
+          <input type="text" name="website" data-cwd-honeypot tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">
+          <p data-cwd-contact-status hidden role="status" aria-live="polite"></p>
           <button class="btn-send" type="submit">Send</button>
         </form>
         <span class="form-smiley" aria-hidden="true">☺</span>
@@ -355,6 +357,8 @@
       </div>
     </div>
   </footer>
+  <script src="https://web-production-54a6d.up.railway.app/static/cwd-contact.js"></script>
+  <script src="js/cwd-contact-extra.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

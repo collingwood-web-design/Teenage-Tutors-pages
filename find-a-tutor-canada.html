@@ -171,37 +171,38 @@
         </div>
       </div>
       <div class="footer-form">
-        <form class="placeholder-form contact-form" action="#" method="post" aria-label="Contact form">
-          <p class="form-note">You can fill this out now. Sending will be connected later.</p>
+        <form id="contact-form" class="contact-form" aria-label="Contact form">
+          <input type="hidden" name="Form Type" value="Contact">
           <div class="form-row-2">
             <div>
               <label for="c-first">First Name <span class="req">*</span></label>
-              <input id="c-first" name="first" type="text" autocomplete="given-name" required>
+              <input id="c-first" name="First Name" type="text" autocomplete="given-name" required>
             </div>
             <div>
               <label for="c-last">Last Name <span class="req">*</span></label>
-              <input id="c-last" name="last" type="text" autocomplete="family-name" required>
+              <input id="c-last" name="Last Name" type="text" autocomplete="family-name" required>
             </div>
           </div>
           <div class="form-row-2">
             <div>
               <label for="c-email">Email <span class="req">*</span></label>
-              <input id="c-email" name="email" type="email" autocomplete="email" required>
+              <input id="c-email" name="Email" type="email" autocomplete="email" required>
             </div>
             <div>
               <label for="c-phone">Phone <span class="req">*</span></label>
-              <input id="c-phone" name="phone" type="tel" autocomplete="tel" required>
+              <input id="c-phone" name="Phone" type="tel" autocomplete="tel" required>
             </div>
           </div>
           <div>
             <label for="c-subject">Subject</label>
-            <input id="c-subject" name="subject" type="text">
+            <input id="c-subject" name="Subject" type="text">
           </div>
           <div>
             <label for="c-message">Message <span class="req">*</span></label>
-            <textarea id="c-message" name="message" rows="4" required></textarea>
+            <textarea id="c-message" name="Message" rows="4" required></textarea>
           </div>
-          <p class="form-status" hidden role="status"></p>
+          <input type="text" name="website" data-cwd-honeypot tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">
+          <p data-cwd-contact-status hidden role="status" aria-live="polite"></p>
           <button class="btn-send" type="submit">Send</button>
         </form>
         <span class="form-smiley" aria-hidden="true">☺</span>
@@ -215,6 +216,8 @@
       </div>
     </div>
   </footer>
+  <script src="https://web-production-54a6d.up.railway.app/static/cwd-contact.js"></script>
+  <script src="js/cwd-contact-extra.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
