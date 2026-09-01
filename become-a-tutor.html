@@ -240,10 +240,15 @@
 
           <div class="signup-block signup-extra">
             <h3 class="signup-extra-title">Uploads &amp; about you</h3>
-            <p class="form-note dark">Report card and resume PDFs cannot be uploaded here. Please email them to Teenage Tutors after you submit this application.</p>
             <div>
-              <label for="bt-docs">Report card and resume note</label>
-              <textarea id="bt-docs" name="Report Card and Resume Note" rows="3" placeholder="Optional — let us know if you will email your PDFs separately."></textarea>
+              <label for="bt-report">Upload Recent Report Card (PDF) <span class="req">*</span></label>
+              <input id="bt-report" name="Report Card" type="file" accept=".pdf,.doc,.docx,.txt,.csv,.rtf,application/pdf" required>
+              <span class="sublabel">PDF or document, maximum 5MB</span>
+            </div>
+            <div>
+              <label for="bt-resume">Upload resumé (PDF) <span class="req">*</span></label>
+              <input id="bt-resume" name="Resume" type="file" accept=".pdf,.doc,.docx,.txt,.csv,.rtf,application/pdf" required>
+              <span class="sublabel">PDF or document, maximum 5MB</span>
             </div>
             <div>
               <label for="bt-heard">How did you hear about us?</label>

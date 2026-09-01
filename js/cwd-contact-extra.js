@@ -2,7 +2,8 @@
  * CWD contact form binder for Teenage Tutors.
  * Binds #contact-form and form[data-cwd-contact], consolidates checkbox
  * groups (same name) into one field so submissions stay under the API's
- * 20-field limit, then POSTs to the shared Railway contact service.
+ * 20-field limit, supports file uploads via multipart, then POSTs to the
+ * shared Railway contact service.
  */
 (function () {
   "use strict";
@@ -26,6 +27,26 @@
     el.textContent = message || "";
     el.hidden = !message;
     el.setAttribute("data-cwd-contact-state", isError ? "error" : message ? "ok" : "");
+  }
+
+  function dispatchContactEvent(root, type, detail) {
+    if (!root || typeof CustomEvent !== "function") {
+      return;
+    }
+    root.dispatchEvent(
+      new CustomEvent(type, {
+        bubbles: true,
+        detail: detail || {},
+      })
+    );
+  }
+
+  function reportError(root, message, reason) {
+    setStatus(root, message, true);
+    dispatchContactEvent(root, "cwd-contact:error", {
+      message: message,
+      reason: reason || "server",
+    });
   }
 
   function collectFields(root) {
@@ -88,6 +109,27 @@
     return { fields: consolidateFields(fields), honeypot: honeypot };
   }
 
+  function collectFiles(root) {
+    var files = [];
+    var elements = root.querySelectorAll('input[type="file"]');
+
+    for (var i = 0; i < elements.length; i++) {
+      var el = elements[i];
+      if (el.disabled || el.hasAttribute("data-cwd-honeypot")) {
+        continue;
+      }
+      var name = (el.getAttribute("name") || "").trim() || "Attachment";
+      if (!el.files || !el.files.length) {
+        continue;
+      }
+      for (var j = 0; j < el.files.length; j++) {
+        files.push({ label: name, file: el.files[j] });
+      }
+    }
+
+    return files;
+  }
+
   function consolidateFields(fields) {
     var grouped = [];
     var indexByName = Object.create(null);
@@ -111,6 +153,28 @@
   function resetRoot(root) {
     if (typeof root.reset === "function") {
       root.reset();
+      return;
+    }
+
+    var elements = root.querySelectorAll("input, textarea, select");
+    for (var i = 0; i < elements.length; i++) {
+      var el = elements[i];
+      var type = (el.getAttribute("type") || "").toLowerCase();
+      if (el.hasAttribute("data-cwd-honeypot")) {
+        el.value = "";
+        continue;
+      }
+      if (type === "file") {
+        el.value = "";
+        continue;
+      }
+      if (type === "checkbox" || type === "radio") {
+        el.checked = false;
+      } else if (el.tagName === "SELECT") {
+        el.selectedIndex = 0;
+      } else if (type !== "submit" && type !== "button") {
+        el.value = "";
+      }
     }
   }
 
@@ -123,17 +187,19 @@
     }
 
     var payloadParts = collectFields(root);
-    if (!payloadParts.fields.length && !payloadParts.honeypot) {
-      setStatus(root, "Please fill in the form.", true);
+    var fileParts = collectFiles(root);
+
+    if (!payloadParts.fields.length && !fileParts.length && !payloadParts.honeypot) {
+      reportError(root, "Please fill in the form.", "validation");
       return;
     }
 
-    var body = {
+    var payload = {
       page_url: window.location.href,
       fields: payloadParts.fields,
     };
     if (payloadParts.honeypot) {
-      body.honeypot = payloadParts.honeypot;
+      payload.honeypot = payloadParts.honeypot;
     }
 
     root.setAttribute("data-cwd-contact-busy", "1");
@@ -145,28 +211,51 @@
     }
 
     try {
-      var response = await fetch(API_BASE + "/v1/contact", {
+      var fetchOptions = {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(body),
-      });
+        headers: { Accept: "application/json" },
+      };
+
+      if (fileParts.length) {
+        var formData = new FormData();
+        formData.append("payload", JSON.stringify(payload));
+        for (var f = 0; f < fileParts.length; f++) {
+          formData.append(fileParts[f].label, fileParts[f].file, fileParts[f].file.name);
+        }
+        fetchOptions.body = formData;
+      } else {
+        fetchOptions.headers["Content-Type"] = "application/json";
+        fetchOptions.body = JSON.stringify(payload);
+      }
+
+      var response = await fetch(API_BASE + "/v1/contact", fetchOptions);
 
       if (response.status === 429) {
-        setStatus(root, "Please wait a moment before sending again.", true);
+        reportError(root, "Please wait a moment before sending again.", "rate_limit");
         return;
       }
       if (!response.ok) {
-        setStatus(root, "Sorry, we could not send your message. Please try again later.", true);
+        reportError(
+          root,
+          "Sorry, we could not send your message. Please try again later.",
+          "server"
+        );
         return;
       }
 
-      setStatus(root, "Thank you — your message has been sent.", false);
+      var successMessage = "Thank you — your message has been sent.";
+      setStatus(root, successMessage, false);
+      dispatchContactEvent(root, "cwd-contact:success", {
+        ok: true,
+        message: successMessage,
+      });
       resetRoot(root);
     } catch (err) {
-      setStatus(root, "Network error. Please check your connection and try again.", true);
+      reportError(
+        root,
+        "Network error. Please check your connection and try again.",
+        "network"
+      );
     } finally {
       root.removeAttribute("data-cwd-contact-busy");
       if (submitBtn) {
