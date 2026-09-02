@@ -2132,6 +2132,15 @@ body.form-success-modal-open {
   line-height: 1.55;
 }
 
+.inline-flag {
+  display: inline-block;
+  width: 18px;
+  height: auto;
+  vertical-align: -0.1em;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
 .region-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
