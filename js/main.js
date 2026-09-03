@@ -66,6 +66,19 @@
     });
   });
 
+  document.querySelectorAll(".faq-trigger").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var item = btn.closest(".faq-item");
+      if (!item) return;
+      var panel = item.querySelector(".faq-panel");
+      var open = !item.classList.contains("is-open");
+      item.classList.toggle("is-open", open);
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      if (panel) panel.hidden = !open;
+      window.requestAnimationFrame(refreshSketchUnderlines);
+    });
+  });
+
   function renderTutors(list, containerId) {
     var root = document.getElementById(containerId);
     if (!root || !Array.isArray(list)) return;

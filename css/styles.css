@@ -1693,6 +1693,14 @@ body.form-success-modal-open {
   color: var(--text);
 }
 
+.prose h1 {
+  margin: 0 0 1rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  color: var(--text-dark);
+}
+
 .prose h2 {
   margin: 2rem 0 0.75rem;
   font-family: var(--font-body);
@@ -1701,7 +1709,8 @@ body.form-success-modal-open {
   color: var(--text-dark);
 }
 
-.prose > h2:first-child {
+.prose > h2:first-child,
+.prose > h1 + h2 {
   margin-top: 0;
   font-size: clamp(1.6rem, 3vw, 2rem);
 }
@@ -2433,6 +2442,74 @@ body.form-success-modal-open {
 
 .faq .accordion-trigger {
   font-size: 1.05rem;
+}
+
+.faq-list {
+  max-width: 44rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 1px solid rgba(12, 113, 195, 0.14);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+}
+
+button.faq-trigger {
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  line-height: 1.35;
+  text-align: left;
+}
+
+button.faq-trigger::after {
+  content: "+";
+  flex: 0 0 auto;
+  color: var(--blue);
+  font-weight: 800;
+  line-height: 1;
+  font-size: 1.15rem;
+}
+
+.faq-item.is-open button.faq-trigger::after {
+  content: "–";
+}
+
+.faq-panel {
+  margin: 0;
+  padding: 0.4rem 0 0;
+}
+
+.faq-panel[hidden] {
+  display: none !important;
+}
+
+.faq-panel p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.55;
+  font-family: var(--font-body);
+  font-size: 1rem;
 }
 
 .quote-block {
