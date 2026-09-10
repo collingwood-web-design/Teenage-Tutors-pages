@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+      /* Prefer clean URLs when someone lands on the .html form. */
+      (function () {
+        var path = window.location.pathname;
+        if (!/\.html$/i.test(path)) return;
+        var clean = path.replace(/\.html$/i, "");
+        if (/\/index$/i.test(clean)) clean = clean.replace(/\/index$/i, "/") || "/";
+        if (clean === "") clean = "/";
+        window.location.replace(clean + window.location.search + window.location.hash);
+      })();
+    </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Become a Tutor | Teenage Tutors</title>
   <meta name="description" content="Apply to become a Teenage Tutor. Flexible part-time tutoring for high-achieving high school and university students in Canada and the USA.">
-  <link rel="canonical" href="https://teenagetutors.ca/become-a-tutor.html">
+  <link rel="canonical" href="https://teenagetutors.ca/become-a-tutor">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Teenage Tutors">
   <meta property="og:title" content="Become a Tutor | Teenage Tutors">
   <meta property="og:description" content="Apply to become a Teenage Tutor. Flexible part-time tutoring for high-achieving high school and university students in Canada and the USA.">
-  <meta property="og:url" content="https://teenagetutors.ca/become-a-tutor.html">
+  <meta property="og:url" content="https://teenagetutors.ca/become-a-tutor">
   <meta property="og:image" content="https://media.cwd-cdn.com/teenage-tutors/images/hero-home.jpg">
   <meta property="og:locale" content="en_CA">
   <meta name="twitter:card" content="summary_large_image">
@@ -104,29 +116,29 @@
   </div>
   <header class="site-header">
     <div class="wrap">
-      <a class="logo" href="index.html"><img src="https://media.cwd-cdn.com/teenage-tutors/images/teenage-tutors-logo-sept-2026.svg" alt="Teenage Tutors"></a>
+      <a class="logo" href="./"><img src="https://media.cwd-cdn.com/teenage-tutors/images/teenage-tutors-logo-sept-2026.svg" alt="Teenage Tutors"></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="nav-toggle-bars" aria-hidden="true"><span></span></span><span class="nav-toggle-label">Menu</span></button>
       <nav class="site-nav" id="site-nav" aria-label="Primary">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="./">Home</a></li>
           <li class="has-sub">
             <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Find a Tutor</a>
             <ul class="sub">
-              <li><a href="find-a-tutor-canada.html" class="nav-country-canada"><img class="nav-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-canada.svg" alt="" width="22" height="15">Canada</a></li>
-              <li><a href="find-a-tutor-usa.html" class="nav-country-usa"><img class="nav-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-usa.svg" alt="" width="22" height="15">USA</a></li>
+              <li><a href="find-a-tutor-canada" class="nav-country-canada"><img class="nav-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-canada.svg" alt="" width="22" height="15">Canada</a></li>
+              <li><a href="find-a-tutor-usa" class="nav-country-usa"><img class="nav-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-usa.svg" alt="" width="22" height="15">USA</a></li>
             </ul>
           </li>
           <li class="has-sub">
             <a class="nav-cta-signup" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sign Up</a>
             <ul class="sub">
-              <li><a href="sign-up.html" class="nav-country-canada"><img class="nav-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-canada.svg" alt="" width="22" height="15">Canada</a></li>
-              <li><a href="sign-up-usa.html" class="nav-country-usa"><img class="nav-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-usa.svg" alt="" width="22" height="15">USA</a></li>
+              <li><a href="sign-up" class="nav-country-canada"><img class="nav-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-canada.svg" alt="" width="22" height="15">Canada</a></li>
+              <li><a href="sign-up-usa" class="nav-country-usa"><img class="nav-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-usa.svg" alt="" width="22" height="15">USA</a></li>
             </ul>
           </li>
-          <li><a class="nav-cta-become is-active" href="become-a-tutor.html">Become a Tutor</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="about.html#scholarship">Scholarship</a></li>
-          <li><a href="community.html">Community</a></li>
+          <li><a class="nav-cta-become is-active" href="become-a-tutor">Become a Tutor</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="about#scholarship">Scholarship</a></li>
+          <li><a href="community">Community</a></li>
         </ul>
       </nav>
     </div>
@@ -357,7 +369,7 @@
           <span class="leadership-heart" aria-hidden="true"><i class="far fa-heart"></i></span>
         </div>
         <p class="center leadership-cta">
-          <a class="btn btn-blue btn-pill btn-shadow" href="index.html#reviews">Reviews</a>
+          <a class="btn btn-blue btn-pill btn-shadow" href="./#reviews">Reviews</a>
         </p>
       </div>
     </section>
@@ -371,7 +383,7 @@
         <p class="footer-lead">Don't be shy!</p>
         <p class="footer-copy">Please call Noelle or fill out the form. We look forward to hearing from you!</p>
         <p class="footer-contact"><a href="tel:14164595618"><i class="fas fa-phone" aria-hidden="true"></i><span>(416) 459-5618</span></a></p>
-        <p class="footer-contact privacy"><a href="privacy-policy.html"><i class="fas fa-edit" aria-hidden="true"></i><span>Privacy Policy</span></a></p>
+        <p class="footer-contact privacy"><a href="privacy-policy"><i class="fas fa-edit" aria-hidden="true"></i><span>Privacy Policy</span></a></p>
         <div class="social">
           <div class="social-group" aria-label="Canada social links">
             <img class="social-flag" src="https://media.cwd-cdn.com/teenage-tutors/images/flag-canada.svg" alt="Canada" width="42" height="21">
