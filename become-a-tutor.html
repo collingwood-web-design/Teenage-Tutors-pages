@@ -105,7 +105,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=validate1">
 </head>
 <body>
   <div class="topbar">
@@ -217,7 +217,7 @@
 
     <section class="signup-form-section" id="applynow">
       <div class="wrap">
-        <form id="contact-form" class="signup-form" aria-label="Become a tutor application">
+        <form id="contact-form" class="signup-form" aria-label="Become a tutor application" data-cwd-validate>
           <input type="hidden" name="Form Type" value="Become a Tutor Application">
 
           <div class="signup-block">
@@ -225,21 +225,21 @@
             <div class="form-row-2">
               <div>
                 <label for="bt-first">First Name <span class="req">*</span></label>
-                <input id="bt-first" name="First Name" type="text" autocomplete="given-name" required>
+                <input id="bt-first" name="First Name" type="text" autocomplete="given-name" required data-cwd-required-message="Please enter your first name.">
               </div>
               <div>
                 <label for="bt-last">Last Name <span class="req">*</span></label>
-                <input id="bt-last" name="Last Name" type="text" autocomplete="family-name" required>
+                <input id="bt-last" name="Last Name" type="text" autocomplete="family-name" required data-cwd-required-message="Please enter your last name.">
               </div>
             </div>
             <div class="form-row-2">
               <div>
                 <label for="bt-email">Email <span class="req">*</span></label>
-                <input id="bt-email" name="Email" type="email" autocomplete="email" required>
+                <input id="bt-email" name="Email" type="email" autocomplete="email" required data-cwd-required-message="Please enter your email address.">
               </div>
               <div>
                 <label for="bt-phone">Phone <span class="req">*</span></label>
-                <input id="bt-phone" name="Phone" type="tel" autocomplete="tel" required>
+                <input id="bt-phone" name="Phone" type="tel" autocomplete="tel" required data-cwd-required-message="Please enter your phone number.">
               </div>
             </div>
           </div>
@@ -280,7 +280,7 @@
 
           <div class="signup-block">
             <h3 class="signup-block-title">School &amp; subjects</h3>
-            <fieldset>
+            <fieldset data-cwd-required-group data-cwd-required-message="Please choose the grade you're in.">
               <legend>What grade are you in? <span class="req">*</span></legend>
               <div class="choice-grid choice-grid-4">
                 <label class="choice-chip"><input type="radio" name="Grade" value="10" required><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> 10</span></label>
@@ -291,7 +291,7 @@
             </fieldset>
             <div>
               <label for="bt-school">Your High School Name &amp; City <span class="req">*</span></label>
-              <input id="bt-school" name="High School Name and City" type="text" required>
+              <input id="bt-school" name="High School Name and City" type="text" required data-cwd-required-message="Please enter your high school name and city.">
             </div>
             <fieldset>
               <legend>What subjects do you prefer to tutor?</legend>
@@ -308,7 +308,7 @@
 
           <div class="signup-block">
             <h3 class="signup-block-title">Availability</h3>
-            <fieldset>
+            <fieldset data-cwd-required-group data-cwd-required-message="Please choose at least one day.">
               <legend>Day preference <span class="req">*</span></legend>
               <div class="choice-grid choice-grid-days">
                 <label class="choice-chip"><input type="checkbox" name="Day Preference" value="Monday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Mon</span></label>
@@ -320,7 +320,7 @@
                 <label class="choice-chip"><input type="checkbox" name="Day Preference" value="Sunday"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Sun</span></label>
               </div>
             </fieldset>
-            <fieldset>
+            <fieldset data-cwd-required-group data-cwd-required-message="Please choose at least one time slot.">
               <legend>Preferred time slots <span class="req">*</span></legend>
               <div class="choice-grid choice-grid-1">
                 <label class="choice-chip"><input type="checkbox" name="Preferred Time Slots" value="Morning"><span class="choice-chip-face"><i class="fas fa-check" aria-hidden="true"></i> Morning (9AM–12PM)</span></label>
@@ -333,22 +333,22 @@
           <div class="signup-block signup-extra">
             <h3 class="signup-extra-title">Uploads &amp; about you</h3>
             <div>
-              <label for="bt-report">Upload Recent Report Card (PDF) <span class="req">*</span></label>
-              <input id="bt-report" name="Report Card" type="file" accept=".pdf,.doc,.docx,.txt,.csv,.rtf,application/pdf" required>
-              <span class="sublabel">PDF or document, maximum 5MB</span>
+              <label for="bt-report">Upload Recent Report Card <span class="req">*</span></label>
+              <input id="bt-report" name="Report Card" type="file" accept=".pdf,.doc,.docx,.txt,.csv,.rtf,.jpg,.jpeg,.png,.gif" required data-cwd-required-message="Please upload your recent report card.">
+              <span class="sublabel">PDF, Word, RTF, TXT, CSV, JPG, PNG or GIF · maximum 5 MB</span>
             </div>
             <div>
-              <label for="bt-resume">Upload resumé (PDF) <span class="req">*</span></label>
-              <input id="bt-resume" name="Resume" type="file" accept=".pdf,.doc,.docx,.txt,.csv,.rtf,application/pdf" required>
-              <span class="sublabel">PDF or document, maximum 5MB</span>
+              <label for="bt-resume">Upload resumé <span class="req">*</span></label>
+              <input id="bt-resume" name="Resume" type="file" accept=".pdf,.doc,.docx,.txt,.csv,.rtf,.jpg,.jpeg,.png,.gif" required data-cwd-required-message="Please upload your resumé.">
+              <span class="sublabel">PDF, Word, RTF, TXT, CSV, JPG, PNG or GIF · maximum 5 MB</span>
             </div>
             <div>
               <label for="bt-heard">How did you hear about us?</label>
-              <input id="bt-heard" name="How Did You Hear About Us" type="text">
+              <input id="bt-heard" name="How Did You Hear About Us" type="text" maxlength="2000">
             </div>
             <div>
               <label for="bt-about">Tell us a little bit about yourself.</label>
-              <textarea id="bt-about" name="About You" rows="5"></textarea>
+              <textarea id="bt-about" name="About You" rows="5" maxlength="2000"></textarea>
             </div>
           </div>
 
@@ -443,7 +443,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/cwd-contact-extra.js"></script>
+  <script src="js/cwd-contact-extra.js?v=validate1"></script>
   <script src="js/main.js"></script>
   <!-- Elfsight Cookie Consent | Untitled Cookie Consent -->
   <script src="https://elfsightcdn.com/platform.js" async></script>

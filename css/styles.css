@@ -1681,6 +1681,57 @@ body.form-success-modal-open {
   background: #f7fbff;
 }
 
+.signup-form .field-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin: 0.45rem 0 0;
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+  background: #ffebee;
+  border: 1px solid #ef9a9a;
+  color: #b71c1c;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.signup-form .field-error .fas {
+  margin-top: 0.15rem;
+}
+
+.signup-form .has-error > input:not([type="checkbox"]):not([type="radio"]),
+.signup-form .has-error > select,
+.signup-form .has-error > textarea {
+  border-color: #e53935;
+  background: #fff8f8;
+}
+
+.signup-form .has-error > input:focus,
+.signup-form .has-error > select:focus,
+.signup-form .has-error > textarea:focus {
+  outline-color: rgba(229, 57, 53, 0.35);
+  border-color: #e53935;
+}
+
+.signup-form fieldset.has-error .choice-chip-face {
+  border-color: #ef9a9a;
+}
+
+.signup-form .char-counter {
+  display: block;
+  margin-top: 0.3rem;
+  text-align: right;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #888;
+}
+
+.signup-form .char-counter.is-near-limit {
+  color: #b71c1c;
+  font-weight: 700;
+}
+
 /* —— Content pages —— */
 .prose {
   max-width: 42rem;
