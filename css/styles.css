@@ -2104,16 +2104,12 @@ body.form-success-modal-open {
   color: var(--white);
 }
 
-.community-projects {
-  background: #eef3f7;
-}
-
 .community-project {
-  margin: 0 0 3.25rem;
+  background: var(--white);
 }
 
-.community-project:last-child {
-  margin-bottom: 0;
+.community-project:nth-of-type(even) {
+  background: #eef3f7;
 }
 
 .community-project .section-title {
@@ -2139,6 +2135,19 @@ body.form-success-modal-open {
   display: block;
   border-radius: 6px;
   object-fit: cover;
+}
+
+.community-media-feature {
+  align-items: center;
+}
+
+.community-text p {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #333;
 }
 
 .community-media figcaption {
