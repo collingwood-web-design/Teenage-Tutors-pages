@@ -551,6 +551,38 @@ body.nav-open {
   padding-top: 0.15rem;
 }
 
+.signup-country-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem 0.85rem;
+  margin: 0.85rem 0 0;
+}
+
+.signup-country-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--blue);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.signup-country-links a:hover {
+  color: var(--blue-dark);
+}
+
+.signup-country-links img {
+  width: 18px;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
 .blurb h3,
 .blurb h4 {
   margin: 0 0 0.65rem;
@@ -2295,6 +2327,12 @@ body.form-success-modal-open {
 
 .region-contact a:hover {
   color: var(--blue-dark);
+}
+
+.region-tile .signup-country-links {
+  grid-column: 1 / -1;
+  justify-content: flex-start;
+  margin: 0.7rem 0 0;
 }
 
 .email-placeholder {
